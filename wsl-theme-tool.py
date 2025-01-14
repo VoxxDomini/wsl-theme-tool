@@ -17,7 +17,7 @@ def print_help():
     exit()
 
 
-
+WSL_PROFILE_NAME = "Ubuntu 22.04.5 LTS"
 
 
 
@@ -155,7 +155,7 @@ def edit_settings(command, values, settings):
     items = settings["profiles"]["list"]
 
     for item in items:
-        if "name" not in item or item["name"] != "Ubuntu":
+        if "name" not in item or item["name"] != WSL_PROFILE_NAME:
             continue
 
         set_setting_value(command, values, item)
